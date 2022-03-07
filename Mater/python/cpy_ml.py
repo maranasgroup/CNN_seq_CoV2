@@ -7,7 +7,7 @@
 # <<<<<<
 
 import sys, os, copy, math, re, shutil, glob, json, argparse
-import subprocess as sub, numpy as np, pandas as pd, matplotlib.pyplot as plt
+import subprocess as sub, numpy as np, matplotlib.pyplot as plt
 
 sys.path.append(os.getenv("HOME") + "/python")
 import cpy, cpy_reaxff
