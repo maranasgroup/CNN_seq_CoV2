@@ -48,7 +48,7 @@ else:
 
 # Unknown variants to be predicted.
 var_unk = []
-var_chk = np.loadtxt('./var_chk.csv', delimiter=',', skiprows=0, dtype=np.str, comments='#')
+var_chk = np.loadtxt('./var_chk.csv', delimiter=',', skiprows=0, dtype=str, comments='#')
 var_unk.extend(var_chk)
 
 # Blind test set to be excluded.
@@ -76,7 +76,7 @@ if mode in ['1','3']:
   kfold = 5
 else:
   kfold = 25
-dev = 'gpu' # 'gpu' or 'cpu'
+dev = 'gpu'
 max_epochs = 2000
 bat_size = 1000
 ep_log_interval = max_epochs//10 # Log interval for epochs, 10%, 20%, 30%, ..., 100%
@@ -143,10 +143,7 @@ loupt_conv2 = loupt_conv1//2 # n_channels for output
 loupt_fc2 = loupt_fc1//4
 
 # Specify device to use
-if dev in ['gpu']:
-  device = torch.device('cuda:0')
-else:
-  device = torch.device('cpu')
+device = torch.device('cuda:0')
 
 # ----------------------
 # Feature initialization
@@ -206,7 +203,7 @@ for s in species:
   tree_saltb = ET.parse(fn_saltb)
 
   ht[s], len_A[s], len_B[s] = head_tail_rbd(s)
-  distmap[s] = np.loadtxt(fn_distmap, delimiter='\t', skiprows=0, dtype=np.float)
+  distmap[s] = np.loadtxt(fn_distmap, delimiter='\t', skiprows=0, dtype=float)
   root_residue[s] = tree_residue.getroot()
   root_hbond[s] = tree_hbond.getroot()
   root_saltb[s] = tree_saltb.getroot()
@@ -302,7 +299,7 @@ ref = dict()
 ref_dict = dict()
 for k in sorted(fn_dict.keys()):
   fn_ref = dir_multi_mutant + fn_dict[k]
-  ref_raw = np.loadtxt(fn_ref, delimiter=',', skiprows=1, dtype=np.str)
+  ref_raw = np.loadtxt(fn_ref, delimiter=',', skiprows=1, dtype=str)
   if k in [11]:
     ref_dict_tmp = {x[0]:(10**float(x[1])-thld)/std_ratio_ace2_rbd+thld for x in ref_raw} # The scale of ACE2 data are larger than RBD data, scaling is needed.
   else:
@@ -1115,7 +1112,7 @@ def main():
     for ifold in range(kfold):
       for irank in range(world_size):
         fn_tmp = f'Results/pred_ifold{ifold}_rank{irank}.csv'
-        rst_tmp = np.loadtxt(fn_tmp, delimiter=",", dtype=np.str, ndmin=2)
+        rst_tmp = np.loadtxt(fn_tmp, delimiter=",", dtype=str, ndmin=2)
         for r in rst_tmp:
           var_tmp = varMapDct[int(r[0])]
           kdr_tmp = r[2]
