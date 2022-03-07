@@ -16,10 +16,11 @@
 
 ## Usage
   ### Prepare variants list for prediction.
-  Modify or create the file "var_chk.csv"
+  Modify or create the file "var_chk.csv".
+  
   See "var_chk_circ.csv" for examples
 
-  ### Predict K_{D,app} ratios for variants in "var_chk.csv"
+  ### Predict K~D,app~ ratios for variants in "var_chk.csv"
   ```
   ./nn_kfold.py 5
   
