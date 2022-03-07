@@ -20,7 +20,7 @@
   
   See "var_chk_circ.csv" for examples
 
-  ### Predict K<sub>D,app<sub> ratios for variants in "var_chk.csv"
+  ### Predict K<sub>D,app</sub> ratios for variants in "var_chk.csv"
   ```
   ./nn_kfold.py 5
   
