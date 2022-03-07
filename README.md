@@ -20,9 +20,8 @@
   
   See "var_chk_circ.csv" for examples
 
-  ### Predict K<sub>D,app</sub> ratios for variants in "var_chk.csv"
-  ```
-  ./nn_kfold.py 5
+  ### Predict K<sub>D,app</sub> ratios for variants in "var_chk.csv" with 25 pre-trained models.
+  `./nn_kfold.py 5`
   
-
-  ```
+  ### 5-fold cross-validation test, generating 5 models.
+  `./nn_kfold.py 3` 
