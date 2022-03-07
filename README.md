@@ -3,6 +3,7 @@
 
 # Configure environment
 # (pre-trained models are based on these version, error may occur for different versions of packages)
+`code`
   conda env remove -n cnn_seq
   conda create -n cnn_seq python=3.8.5
   conda activate cnn_seq
