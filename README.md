@@ -16,7 +16,7 @@
 
 ## Files
   [./]
-  ==cnn_kfold.py== is the main code for training, prediction and analysls.
+  **cnn_kfold.py** is the main code for training, prediction and analysls.
   "var_blind_test_set.csv" contains 1677 variants, constituting a completely blind test set.
   "var_chk.csv" contains all variants to be predicted.
   "var_chk_circ.csv" contains many variants (including circulating variants), which can serve as an example of how to prepare the list.
