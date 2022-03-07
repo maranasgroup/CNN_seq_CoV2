@@ -1,7 +1,7 @@
 # CNN_seq
   CNN model based on RBD-ACE2 sequence, predicting binding affinity change upon mutations.
 
-# Configure environment
+## Configure environment
   Pre-trained models are based on these versions of packages, and errors/warnings may occur when using different versions.
   ```bash
   conda env remove -n cnn_seq
