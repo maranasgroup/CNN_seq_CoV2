@@ -18,14 +18,21 @@
 
 ## Files
   [./]
+
   `cnn_kfold.py` is the main code for training, prediction and analysls.
+
   `var_blind_test_set.csv` contains 1677 variants, constituting a completely blind test set.
+
   `var_chk.csv` contains all variants to be predicted.
+
   `var_chk_circ.csv` contains many variants (including circulating variants), which can serve as an example of how to prepare the list.
 
   [./Mater]
+
   [./Mater/expt_multi_mutant] Contains experimental data for training purposes.
+
   [./Mater/python] Contains python modules called by `cnn_kfold.py`.
+
   [./Mater/species] Contains basic information used by `cnn_kfold.py` for each hosts.
 
   [./Models] Place where trained models are stored. Note that freshly-trained models will overwrite existing ones.
