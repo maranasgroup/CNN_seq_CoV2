@@ -2,7 +2,7 @@
   CNN model based on RBD-ACE2 sequence, predicting binding affinity change upon mutations.
 
 ## Configure environment
-  Pre-trained models are based on these versions of packages, and errors/warnings may occur when using different versions.\
+  Pre-trained models are based on these packages, and errors/warnings may occur when using different versions.
   Install Anaconda for Linux on the node following the [instructions](https://docs.anaconda.com/anaconda/install/linux/).
   ```bash
   conda env remove -n cnn_seq
