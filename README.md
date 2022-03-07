@@ -46,7 +46,7 @@
   See `var_chk_circ.csv` for examples.
 
   Note that for non-human hosts, the residue indices are 318 smaller than the expected one.
-  For instance, deer_166Kcorresponds to E484K for deer, while humancov2_484K or simply 484K corresponds to E484K for human.
+  For instance, deer_166K corresponds to E484K for deer, while humancov2_484K or simply 484K corresponds to E484K for human.
 
   ### Predict K<sub>D,app</sub> ratios for variants in `var_chk.csv` with 25 pre-trained models.
   `./cnn_kfold.py 5`
