@@ -11,6 +11,7 @@
   conda activate cnn_seq
   conda install numpy matplotlib scikit-learn
   conda install pytorch=1.8.1 torchvision torchaudio cudatoolkit=10.2 -c pytorch
+  conda install biopython -c conda-forge
   pip install biopython
   ```
 
