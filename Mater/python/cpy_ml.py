@@ -10,7 +10,7 @@ import sys, os, copy, math, re, shutil, glob, json, argparse
 import subprocess as sub, numpy as np, matplotlib.pyplot as plt
 
 sys.path.append(os.getenv("HOME") + "/python")
-import cpy, cpy_reaxff
+import cpy
 
 from Bio import SeqIO
 from sklearn.metrics import matthews_corrcoef, r2_score, accuracy_score
